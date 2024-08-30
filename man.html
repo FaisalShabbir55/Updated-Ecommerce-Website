@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,71 +9,55 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-<!-- 
+    <!-- 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
-    
+
 </head>
+
 <body>
     <div class="containerr">
         <div class="header">
-            
-            <div class="topbar">
-                <p><i class="fa-solid fa-location-dot"></i> Find a Store &nbsp;<i class="fa-solid fa-truck-fast"></i>&nbsp;Order Traking </p>
-                <span>100% secure delivery contacting the counter</span>
-                <select name="" id="">
-                    <option value="">English</option>
-                    <option value="">Urdu</option>
-                    <option value="">German</option>
-                  
-                </select>
-
-            
-            </div>
-
-
             <div class="search">
-                
                 <div class="logo">
-                    <img src="aa.png" alt="">
+                    <img src="assets/aa.png" alt="">
                 </div>
-
                 <div class="searchbox">
-                    <input type="search"  placeholder="Enter your keyword">
+                    <input type="search" placeholder="Enter your keyword">
                     <button>Search</button>
                 </div>
-
                 <div class="profileInfo">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-regular fa-user"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                   
+                    <i class="fa-solid fa-cart-shopping"></i>   
                 </div>
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a class="dropdown" href="#">Home</a></li>
+                    <li><a class="dropdown" href="#" data-category="Home">Home</a></li>
                     <li>
                         <div class="dropdown">
-                            <button class="dropbtn"><a href="#">Category <i class="fa-solid fa-caret-down"></i></a></button>
+                            <button class="dropbtn"><a href="#" data-category="Home">Category <i
+                                        class="fa-solid fa-caret-down"></i></a></button>
                             <div class="dropdown-content">
-                                <a href="man.html">Men</a>
-                                <a href="women.html">Woman</a>
-                                <a href="child.html">Children</a>
+                                <a href="#" data-category="Men">Men</a>
+                                <a href="#" data-category="Woman">Woman</a>
+                                <a href="#" data-category="Children">Children</a>
                             </div>
                         </div>
                     </li>
                     <li><a href="#">Blogs</a></li>
                     <li>
                         <div class="dropdown">
-                            <button class="dropbtn"><a href="#">Shops <i class="fa-solid fa-caret-down"></i></a></button>
+                            <button class="dropbtn"><a href="#">Shops <i
+                                        class="fa-solid fa-caret-down"></i></a></button>
                             <div class="dropdown-content">
-                                <a href="watch.html">watches</a>
-                                <a href="jewellery.html">Jewellery</a>
-                                <a href="bag.html">Bags</a>
-                                <a href="shoes.html">Shoes</a>
-                                <a href="Glass.html">Glasses</a>
+                                <a href="#" data-category="watches">watches</a>
+                                <a href="#" data-category="Jewellery">Jewellery</a>
+                                <a href="#" data-category="Bags">Bags</a>
+                                <a href="#" data-category="Shoes">Shoes</a>
+                                <a href="#" data-category="Glasses">Glasses</a>
                             </div>
                         </div>
                     </li>
@@ -89,7 +74,7 @@
 
         <!------------------------------------background----------------------------------->
 
-        <div class="backimg" style="background-image: url(men/back.jpg)">
+        <div class="backimg" id="displayed-image">
             <div class="massage">
                 <h2>OUR STORE</h2>
                 <p>As many of you know, our company has a wide range feild of activity: <br>
@@ -101,20 +86,20 @@
                 </p>
             </div>
         </div>
-    
-    
+
+
         <!-----------------***-------------------background------------------***----------------->
 
-        
+
         <div class="products">
             <h1>All Products</h1>
 
             <div class="content">
                 <div class="box1">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/s1.jpg" alt="loading">
+                        <img src="assets/men/s1.jpg" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
@@ -123,9 +108,9 @@
                 </div>
                 <div class="box2">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/s2.jpg" alt="loading">
+                        <img src="assets/men/s2.jpg" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
@@ -134,9 +119,9 @@
                 </div>
                 <div class="box3">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/73025-1-600x600.jpg" alt="loading">
+                        <img src="assets/men/s3.png" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
@@ -145,9 +130,9 @@
                 </div>
                 <div class="box4">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/2-4-600x600.jpg" alt="loading">
+                        <img src="assets/men/s4.jpg" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
@@ -156,9 +141,9 @@
                 </div>
                 <div class="box5">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/s3.png" alt="loading">
+                        <img src="assets/men/s5.jpg" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
@@ -167,30 +152,32 @@
                 </div>
                 <div class="box6">
                     <h3>product name</h3>
-                    <h2>Product price  </h2>
+                    <h2>Product price </h2>
                     <div class="picture">
-                        <img src="men/73025-2-600x600.jpg" alt="loading">
+                        <img src="assets/men/s6.jpg" alt="loading">
                     </div>
                     <div class="givestar">
                         <p> 4.0 <i class="fa-solid fa-star"></i></p>
                     </div>
                     <button>Quick View</button>
                 </div>
-            </div> 
-
-            <div class="signup">
-                <img src="men/s5.jpeg" alt="">
-                <div class="signupdata">
-                    <h2>SIGN UP FOR THE LATEST NEWS & OFFERS</h2>
-                    <input type="email" placeholder="Email">
-                    <button>Subscribe</button>
-                    <p>"Your Primary is our most priority. Your email is secure with us"</p>
-                </div>
             </div>
-    </div> 
-        
+
+        </div>
+
+
+        <div class="signup">
+            <img src="assets/men/footer.jpeg" id="footer-img" alt="">
+            <div class="signupdata">
+                <h2>SIGN UP FOR THE LATEST NEWS & OFFERS</h2>
+                <input type="email" placeholder="Email">
+                <button>Subscribe</button>
+                <p>"Your Primary is our most priority. Your email is secure with us"</p>
+            </div>
+        </div>
+
         <!-- ----------------***--------------contant-------------------***-------------------- -->
-       
+
         <div class="footer">
 
             <div class="footer1">
@@ -242,7 +229,9 @@
                     <ul>
                         <li>Find a location nearest you.</li>
                         <li>See our store</li>
-                        <li><h3>+923166800572</h3></li>
+                        <li>
+                            <h3>+923166800572</h3>
+                        </li>
                         <li>faisalmaneka0@gmail.com</li>
                     </ul>
                 </div>
@@ -253,18 +242,6 @@
                         <li><b>Address:</b> Laborty chock, Gulbarg III, Lahore</li>
                         <li><b>Hours:</b>9:00 - 6:30 Monday to Friday</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="footer3">
-                <div class="left">
-
-                </div>
-                <div class="FOOOTERlogo">
-                    <h2>Fashion Fusion</h2>
-                </div>
-                <div class="right">
-                    
                 </div>
             </div>
 
@@ -298,9 +275,11 @@
 
     </div>
 
+    <script src="script.js"></script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script> -->
 </body>
+
 </html>

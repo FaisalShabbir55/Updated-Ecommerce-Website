@@ -2,41 +2,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
-
+  
 }
 
 /* --------------------------------------header--------------------------------------------- */
 
-.topbar {
-  /* padding: 0px 200px; */
-  background-color: #1e1d23;
+body{
+  overflow-x: hidden;
   width: 100vw;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f1f1f1;
-}
-
-.topbar span {
-  margin: 300px;
-}
-
-.topbar select {
-  border: none;
-  padding: 0px 10px;
-  border-radius: 20px;
-  outline: none;
 }
 
 .logo img{
-  height: 50px;
+  height: 30px;
 }
 
 .search {
   width: 100vw;
-  height: 90px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +36,7 @@
 .searchbox button {
   cursor: pointer;
   width: 10vw;
-  height: 5vh;
+  height: 6.5vh;
   border-radius: 0px 25px 25px 0px;
   background-color: yellowgreen;
   border: none;
@@ -69,7 +51,7 @@
   border: 0.2px solid yellowgreen;
   padding: 0px 20px;
   width: 30vw;
-  height: 5vh;  
+  height: 6.5vh;  
   outline: none;
   border-radius: 25px 0px 0px 25px;
 }
@@ -203,7 +185,7 @@
 
 
 .backimg{
-
+  background-image: url("assets/men/back.jpg");
   height: 80vh;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -234,7 +216,7 @@
 
 .content {
   background-color: #ffff;
-  height: 100vh;
+  height: 120vh;
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.4%;
   grid-template-rows: 50% 50%;
@@ -260,7 +242,7 @@
   border: none;
 }
 
-.box1 button:hover{
+.box1 button:hover, .box2 button:hover, .box3 button:hover, .box4 button:hover, .box5 button:hover .box6 button:hover{
   background-color: #008F41;
   transition: 0.2s;
   padding: 12px 32%;
@@ -279,11 +261,6 @@
   border: none;
 }
 
-.box2 button:hover{
-  background-color: #008F41;
-  transition: 0.2s;
-  padding: 12px 32%;
-}
 .box3{
   grid-row: 1/2;
   grid-column: 3/4;
@@ -297,11 +274,6 @@
   border: none;
 }
 
-.box3 button:hover{
-  background-color: #008F41;
-  transition: 0.2s;
-  padding: 12px 32%;
-}
 .box4{
   grid-row: 2/3;
   grid-column: 1/2;
@@ -315,11 +287,6 @@
   border: none;
 }
 
-.box4 button:hover{
-  background-color: #008F41;
-  transition: 0.2s;
-  padding: 12px 32%;
-}
 .box5{
   grid-row: 2/3;
   grid-column: 2/3;
@@ -333,11 +300,6 @@
   border: none;
 }
 
-.box5 button:hover{
-  background-color: #008F41;
-  transition: 0.2s;
-  padding: 12px 32%;
-}
 .box6{
   grid-row: 2/3;
   grid-column: 3/4;
@@ -349,12 +311,6 @@
 .box6 button{
   padding: 10px 30%;
   border: none;
-}
-
-.box6 button:hover{
-  background-color: #008F41;
-  transition: 0.2s;
-  padding: 12px 32%; 
 }
 
 .picture img{
@@ -369,7 +325,7 @@
 .signup{
   background-color: rgb(247, 251, 251);
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
 }
 
@@ -423,9 +379,9 @@
 
 
 .footer{
-  height: 60vh;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 30% 45% 7% 18%;
+  grid-template-rows: 30% 45% 25%;
   color: #ffff;
 }
 
@@ -468,51 +424,13 @@
   list-style: none;
 }
 
-
-
-.footer3{
+.footer4{
   grid-row: 3/4;
   background-color: #181818;
-}
-
-.footer3{
-  background-color: #181818;
-  display: grid;
-  grid-template-columns: 43% 14% 43%;
-}
-
-
-.FOOOTERlogo h2{
-  padding: 0px 20px;
-}
-
-
-
-
-.left{
-  margin-left: 150px;
-  position: relative;
-  margin-top: 17px;
-  background-color: #ffff;
-  height: 1px;
-}
-.right{
-  margin-right: 160px;
-  position: relative;
-  top: -60;
-  margin-left: -30px;
-  margin-top: 17px;
-  background-color: #ffff;
-  height: 1px;
-}
-.footer4{
-  grid-row: 4/5;
-  background-color: #181818;
-  display: grid;
-  grid-template-columns: 25% 55% 20%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10%;
+  gap: 12%;
 }
   
 
@@ -521,10 +439,10 @@
   padding: 5px;
 }
 
-.copyright{
+/* .copyright{
   position: relative;
   left: 30%;
-}
+} */
 
 .cardicons ul li{
   display: inline-block;
