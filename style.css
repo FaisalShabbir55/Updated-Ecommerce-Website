@@ -212,14 +212,12 @@ body{
 }
 
 
-
-
 .content {
-  background-color: #ffff;
   height: 120vh;
+  background-color: #ffff;
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.4%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 30px;
   text-align: center;
   margin: 0% 10% 5% 10%;
 }
@@ -228,89 +226,24 @@ body{
   padding: 30px 50px;
 }
 
-.box1{
-  grid-row: 1/2;
-  grid-column: 1/2;
+.box1, .box2, .box3, .box4, .box5, .box6{
   background-color: #FFFF;
   border: 1px dotted black;
   padding-top: 20px;
+  height: 57vh;
 }
 
 
-.box1 button{
+.box1 button, .box2 button, .box3 button, .box4 button, .box5 button, .box6 button{
   padding: 10px 30%;
   border: none;
 }
 
-.box1 button:hover, .box2 button:hover, .box3 button:hover, .box4 button:hover, .box5 button:hover .box6 button:hover{
+.box1 button:hover, .box2 button:hover, .box3 button:hover, .box4 button:hover, .box5 button:hover, .box6 button:hover{
   background-color: #008F41;
   transition: 0.2s;
   padding: 12px 32%;
  
-}
-.box2{
-  grid-row: 1/2;
-  grid-column: 2/3;
-  background-color: #FFFF;
-  border: 1px dotted black;
-  padding-top: 20px;
-}
-
-.box2 button{
-  padding: 10px 30%;
-  border: none;
-}
-
-.box3{
-  grid-row: 1/2;
-  grid-column: 3/4;
-  background-color: #FFFF;
-  border: 1px dotted black;
-  padding-top: 20px;
-}
-
-.box3 button{
-  padding: 10px 30%;
-  border: none;
-}
-
-.box4{
-  grid-row: 2/3;
-  grid-column: 1/2;
-  background-color: #FFFF;
-  border: 1px dotted black;
-  padding-top: 20px;
-}
-
-.box4 button{
-  padding: 10px 30%;
-  border: none;
-}
-
-.box5{
-  grid-row: 2/3;
-  grid-column: 2/3;
-  background-color: #FFFF;
-  border: 1px dotted black;
-  padding-top: 20px;
-}
-
-.box5 button{
-  padding: 10px 30%;
-  border: none;
-}
-
-.box6{
-  grid-row: 2/3;
-  grid-column: 3/4;
-  background-color: #FFFF;
-  border: 1px dotted black;
-  padding-top: 20px;
-}
-
-.box6 button{
-  padding: 10px 30%;
-  border: none;
 }
 
 .picture img{
