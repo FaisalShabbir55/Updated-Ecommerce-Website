@@ -187,9 +187,10 @@ body{
 .backimg{
   background-image: url("assets/men/back.jpg");
   height: 80vh;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .backimg h2{
@@ -213,7 +214,7 @@ body{
 
 
 .content {
-  height: 120vh;
+  height: auto;
   background-color: #ffff;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
@@ -254,18 +255,21 @@ body{
   margin: 10px 0px;
 }
 
-
 .signup{
-  background-color: rgb(247, 251, 251);
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(247, 251, 251);
+  width: auto;
+  height: auto;
+  padding: 20px 0;
 }
 
-
 .signup img{
-  height: 80vh;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
   margin: 40px 0px;
+  width: auto;
 }
 
 
@@ -286,6 +290,8 @@ body{
   outline: none;
 
 }
+
+
 .signupdata button{
   cursor: pointer;
   width: 10vw;
@@ -312,19 +318,23 @@ body{
 
 
 .footer{
+  background-color: #181818;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 30% 45% 25%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-rows: 30% 45% 25%; */
   color: #ffff;
 }
 
 .footer1{
-  grid-row: 1/2;
+  /* grid-row: 1/2; */
   background-color: #008F41;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%;
-  justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  /* justify-content: center; */
   align-items: center;
   padding: 0 10%;
 }
@@ -334,11 +344,9 @@ body{
 }
 
 .footer2{
-  grid-row: 2/3;
-  background-color: #181818;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   padding: 0 10%;
 }
@@ -358,12 +366,12 @@ body{
 }
 
 .footer4{
-  grid-row: 3/4;
-  background-color: #181818;
   display: flex;
-  justify-content: center;
+  background-color: #181818;
+  width: 100%;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 12%;
+  gap: 4%;
 }
   
 
@@ -371,11 +379,6 @@ body{
   display: inline-block;
   padding: 5px;
 }
-
-/* .copyright{
-  position: relative;
-  left: 30%;
-} */
 
 .cardicons ul li{
   display: inline-block;
@@ -401,4 +404,103 @@ body{
 
 
 
-/* https: //preview.themeforest.net/item/leo-poco-elementor-fastfood-restaurant-prestashop-theme/full_screen_preview/44981675?_ga=2.175675490.1377726142.1682028344-385950791.1671437813&_gac=1.262932792.1682028346.EAIaIQobChMI6tz7qrq5_gIVjON3Ch2vjgJaEAAYAiAAEgJ56_D_BwE */
+@media (max-width: 1000px){
+  .signup{
+    display: contents;
+  }
+
+
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .searchbox {
+    margin: 50px;
+  }
+
+  .searchbox button {
+    width: 30vw;
+  }
+
+  .searchbox input {
+    width: 60vw;
+  }
+
+  .massage {
+    top: 10%;
+    right: 5%;
+  }
+
+  .footer1, .footer2, .footer4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .signup img {
+    width: 70%;
+  }
+
+  .signup input {
+    width: 80%;
+  }
+
+  .footer ul {
+    text-align: center;
+  }
+
+  .footer h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .body{
+    overflow-x: hidden;
+  }
+    .searchbox {
+    margin: 20px;
+  }
+
+  .searchbox button {
+    width: 40vw;
+    font-size: 14px;
+  }
+
+  .searchbox input {
+    width: 50vw;
+  }
+
+  .massage {
+    top: 5%;
+    right: 5%;
+  }
+
+  .signup img {
+    width: 70%;
+  }
+
+  .footer1, .footer2, .footer4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu ul li a {
+    margin: 11px 20px;
+  }
+
+  .footer ul {
+    text-align: center;
+  }
+
+  .footer h1 {
+    font-size: 16px;
+  }
+
+  .signup input {
+    width: 90%;
+  }
+}
+
