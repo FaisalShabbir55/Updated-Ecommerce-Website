@@ -3,23 +3,18 @@ const displayedImage = document.getElementById("displayed-image");
 const footerImage = document.getElementById("footer-img");
 const boxes = document.querySelectorAll(".content .box1, .content .box2, .content .box3, .content .box4, .content .box5, .content .box6");
 const searchIcon = document.getElementById("searchIcon");
-const profileInfo = document.querySelectorAll(".profileInfo i");
 const searchBoxInput = document.querySelector(".searchbox input");
 const searchBoxBtn = document.querySelector(".searchbox button");
 
 document.getElementById("menuToggle").addEventListener("click", function() {
     const menu = document.getElementById("menu");
-    if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-    } else {
-        menu.classList.add("show");
-    }
+    menu.classList.toggle("show");
 });
 
+
 searchIcon.addEventListener('click', function(event){
-    profileInfo.forEach(icon => {
-        icon.style.display = "none";
-    });
+    
+    searchIcon.style.display = "none";
 
     searchBoxInput.style.display = "block"; // makes the input feild visible
     searchBoxBtn.style.display = "block";

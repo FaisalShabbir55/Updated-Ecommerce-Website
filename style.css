@@ -36,7 +36,7 @@ body{
 .searchbox button {
   cursor: pointer;
   width: 10vw;
-  height: 6.5vh;
+  height: 8vh;
   border-radius: 0px 25px 25px 0px;
   background-color: yellowgreen;
   border: none;
@@ -51,7 +51,7 @@ body{
   border: 0.2px solid yellowgreen;
   padding: 0px 20px;
   width: 30vw;
-  height: 6.5vh;  
+  height: 8vh;  
   outline: none;
   border-radius: 25px 0px 0px 25px;
 }
@@ -411,13 +411,13 @@ body{
 
   .searchbox input {
     width: 25vw;
-    height: 4vh;  
+    height: 10vh;  
   }
   
   
   .searchbox button {
     width: 12vw;
-    height: 4vh;
+    height: 10vh;
   }
   
   .menu ul {
@@ -516,22 +516,27 @@ body{
   .body{
     overflow-x: hidden;
   }
-    .searchbox {
+  
+  .logo img{
+    height: 15px;
+  }
+
+  .searchbox {
     margin: 20px;
   }
 
   .searchbox input {
     transition: width 2s linear 1s;
-    width: 47vw;
-    height: 4vh;  
+    width: 35vw;
+    height: 9vh;  
     display: none;
   }
 
 
   .searchbox button {
     font-size: 12px;
-    width: 20vw;
-    height: 4vh;
+    width: 15vw;
+    height: 9vh;
     display: none;
   }
 
@@ -549,7 +554,12 @@ body{
     display: block;
   }
 
-
+  .profileInfo i {
+    margin: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 6px;
+  }
   #searchIcon{
     display: contents;
   }
