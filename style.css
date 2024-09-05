@@ -20,7 +20,7 @@ body{
   width: 100vw;
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   color: #FFFF;
 }
@@ -56,6 +56,10 @@ body{
   border-radius: 25px 0px 0px 25px;
 }
 
+#searchIcon{
+  display: none;
+}
+
 .profileInfo i {
   margin: 5px;
   cursor: pointer;
@@ -77,10 +81,17 @@ body{
 
 /* -----------------------------menu----------------------------------------- */
 
+.menu-container {
+  position: relative;
+  width: 100%;
+  background-color: #008F41;
+}
 
+.menu-toggle{
+  display: none;
+}
 
 .menu {
-  /* background-color: #00A149; */
   background-color: #008F41;
   width: 100vw;
   height: 50px;
@@ -156,8 +167,6 @@ body{
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -231,7 +240,8 @@ body{
   background-color: #FFFF;
   border: 1px dotted black;
   padding-top: 20px;
-  height: 57vh;
+  height: max-content;
+  padding: 20px 0px;
 }
 
 
@@ -257,36 +267,31 @@ body{
 
 .signup{
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: rgb(247, 251, 251);
-  width: auto;
-  height: auto;
   padding: 20px 0;
 }
 
 .signup img{
-  justify-content: center;
+  /* justify-content: center; */
   max-width: 100%;
   height: auto;
   margin: 40px 0px;
-  width: auto;
+  width: 50vw;
 }
 
 
-.signupdata{
-  position: relative;
-  left: 5%;
-  top: 40%;
-}
 .signupdata h2{
   padding: 10px 0px;
   
 }
+
+
 .signupdata input{
   border: 0.2px solid rgb(146, 210, 210);
-  padding: 0px 20px;
-  width: 20vw;
-  height: 5vh;  
+  padding: 8px 20px;
+  width: 60%;
   outline: none;
 
 }
@@ -294,8 +299,7 @@ body{
 
 .signupdata button{
   cursor: pointer;
-  width: 10vw;
-  height: 5vh;
+  padding: 8px 20px;
   background-color: yellowgreen;
   border: none;
 }
@@ -323,38 +327,24 @@ body{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-rows: 30% 45% 25%; */
   color: #ffff;
 }
 
-.footer1{
-  /* grid-row: 1/2; */
+.footer1, .footer2{
+  width: 100%;
   background-color: #008F41;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-
-  /* justify-content: center; */
-  align-items: center;
-  padding: 0 10%;
+  flex-wrap: wrap;
+  justify-content: space-around; /* change from space-between */
+  align-items: flex-start; /* ensures content aligns at the top */
+  gap: 20px; /* add some space between items */
+  padding: 20px 10%;
 }
 
 .footer1 h2{
   padding: 5px 0;
 }
 
-.footer2{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-}
-
-.ourcompany{
-  position: relative;
-  bottom: 25px;
-}
 
 .footer2 h1{
   padding: 10px 0px;
@@ -365,7 +355,7 @@ body{
   list-style: none;
 }
 
-.footer4{
+.footer3{
   display: flex;
   background-color: #181818;
   width: 100%;
@@ -404,27 +394,89 @@ body{
 
 
 
-@media (max-width: 1000px){
-  .signup{
-    display: contents;
-  }
+/* Media Queries */
+
+@media (max-width: 500px) {
+
+
 
 
 }
 
 
-/* Media Queries */
 @media (max-width: 768px) {
   .searchbox {
     margin: 50px;
   }
 
+  .searchbox input {
+    width: 25vw;
+    height: 4vh;  
+  }
+  
+  
   .searchbox button {
-    width: 30vw;
+    width: 12vw;
+    height: 4vh;
+  }
+  
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
 
-  .searchbox input {
-    width: 60vw;
+  .menu-toggle {
+    display: block;
+    background-color: #008F41;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .menu ul li {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu ul li a {
+    padding: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .menu.show {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu ul li a {
+    margin: 11px 10px;
+  
+  }
+
+  .signup{
+    display: contents;
+  }
+
+  .signupdata h2{
+    font-size: medium;
+    
+  }
+
+  .signup img{
+    margin: 0 18%;
+    width: 70%;
+
+  }
+
+  .signupdata{
+    margin: 10% 18%;
   }
 
   .massage {
@@ -432,28 +484,33 @@ body{
     right: 5%;
   }
 
-  .footer1, .footer2, .footer4 {
+  .massage p{
+    font-size: small;
+  }
+  .massage h2{
+    font-size: x-large;
+  }
+  
+  
+  .footer1, .footer2{
+    background-color: #008F41;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 20px;
+  }
+  
+  .footer3{
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .signup img {
-    width: 70%;
-  }
-
-  .signup input {
-    width: 80%;
-  }
-
-  .footer ul {
-    text-align: center;
+    gap: 20px;
   }
 
   .footer h1 {
     font-size: 18px;
   }
 }
+
 
 @media (max-width: 480px) {
   .body{
@@ -463,35 +520,68 @@ body{
     margin: 20px;
   }
 
-  .searchbox button {
-    width: 40vw;
-    font-size: 14px;
+  .searchbox input {
+    transition: width 2s linear 1s;
+    width: 47vw;
+    height: 4vh;  
+    display: none;
   }
 
-  .searchbox input {
-    width: 50vw;
+
+  .searchbox button {
+    font-size: 12px;
+    width: 20vw;
+    height: 4vh;
+    display: none;
   }
+
+
+  .searchbox input, .searchbox button {
+    transform: translateX(100%); 
+    opacity: 0;
+    display: none;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .searchbox input.show, .searchbox button.show {
+    transform: translateX(0); 
+    opacity: 1;
+    display: block;
+  }
+
+
+  #searchIcon{
+    display: contents;
+  }
+
+
+
 
   .massage {
     top: 5%;
     right: 5%;
+    left: 5%;
+    overflow-x: hidden;
   }
+
+  .massage p{
+    font-size: small;
+  }
+  .massage h2{
+    font-size: x-large;
+  }
+
 
   .signup img {
     width: 70%;
   }
+  
+  .signup input {
+    width: 40%;
+  }
 
-  .footer1, .footer2, .footer4 {
-    flex-direction: column;
+  .footer1, .footer2, .footer3 {
     align-items: center;
-    text-align: center;
-  }
-
-  .menu ul li a {
-    margin: 11px 20px;
-  }
-
-  .footer ul {
     text-align: center;
   }
 
@@ -499,8 +589,5 @@ body{
     font-size: 16px;
   }
 
-  .signup input {
-    width: 90%;
-  }
 }
 
