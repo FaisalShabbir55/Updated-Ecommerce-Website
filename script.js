@@ -5,10 +5,16 @@ const boxes = document.querySelectorAll(".content .box1, .content .box2, .conten
 const searchIcon = document.getElementById("searchIcon");
 const searchBoxInput = document.querySelector(".searchbox input");
 const searchBoxBtn = document.querySelector(".searchbox button");
+var menu = document.getElementById('menu');
 
-document.getElementById("menuToggle").addEventListener("click", function() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("show");
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    menu.classList.toggle('show');
+    // if (menu.classList.contains('show')) {
+    //     menu.style.position = "relative";
+    // } else {
+    //     menu.style.position = "fixed";
+    // }
 });
 
 
